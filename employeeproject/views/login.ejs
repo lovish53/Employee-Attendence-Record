@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    
+    <section id="login"> 
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h2 class="text-center">Login Here!!</h2>
+                <%=message%>
+                <form action="" method="post"  class="d-block" style="width: 380px;float: left;">
+                    <label for="">Email</label>
+                    <input type="Email" name="email" class="form-control"  required>
+                    <label for="">Password</label>
+                    <input type="password" name="pass" class="form-control" id="passshow"  required>
+                      <a href="" class="mt-1">Forgot Password?</a>
+                    <button type="submit" class="btn btn-success form-control mt-2">Login</button>
+                    <div class="container mt-1">
+                        <div class="row me-3 mb-2">
+                        <div class="col-md-5"><hr></div>
+                        <div class="col-md-2 " style="text-align: center;">OR</div>
+                        <div class="col-md-5 "><hr></div>
+                        </div>
+                    </div>
+                </form>
+                <a href="/reg"><button class="btn btn-info form-control">Create Account</button></a>
+                <button type="" id="eye-button" onclick="showpass()"><p ><i class="bi bi-eye"></i></button>
+            </div>
+            <div class="col-md-4"></div>
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        
+        function showpass(){
+         let a=document.getElementById("passshow").attributes[0].value  
+        if(a=='password'){
+        document.getElementById("passshow").attributes[0].value='text'
+        document.getElementById('eye-icon').attributes[0].value="bi bi-eye-slash"    
+        }
+        else if(a=='text'){
+        document.getElementById("passshow").attributes[0].value='password'
+        document.getElementById('eye-icon').attributes[0].value="bi bi-eye"    
+        }
+    }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#login{
+    display: flex;
+    height: 640px;
+    align-items: center;
+}
+#holiday{
+   display: flex;
+   height: 640px;
+   align-items: center;
+}
+#login #eye-button{
+    font-size: 20px;
+    height:30px;
+    width: 30px;
+    border: none;
+    background-color: white;
+    float:right;
+    margin-top: 90px;
+ }
+
+ #addemployee{
+    display: flex;
+    height: 640px;
+    align-items: center;
+ }
+ #header{
+    background-color: indianred;
+ }
